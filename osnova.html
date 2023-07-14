@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  </head>
+  <body>
+    <a-assets>
+      <img id="grid" src="https://cdn.glitch.global/703bba3e-0a29-401f-9acf-ed455d3466c0/border.png?v=1678969025305" />
+	</a-assets>
+    <a-scene>
+      <a-marker id="marker_1" type="pattern" url="pat\pattern_1.patt">
+        <a-box material="color: #4CC3D9; transparent: true; opacity: 0.3; "></a-box>
+      </a-marker>
+      <a-marker id="marker_2" type="pattern" url="pat\pattern_2.patt">
+        <a-box material="color: #FFCC00; transparent: true; opacity: 0.3; src: #grid;"></a-box>
+      </a-marker>
+      <a-marker id="marker_3" type="pattern" url="pat\pattern_3.patt">
+        <a-box material="color: #FF2400; transparent: true; opacity: 0.3; src: #grid;"></a-box>
+      </a-marker>
+      <a-marker id="marker_4" type="pattern" url="pat\pattern_4.patt">
+        <a-box material="color: #6A5ACD; transparent: true; opacity: 0.3; src: #grid;"></a-box>
+      </a-marker>
+      <a-marker id="marker_5" type="pattern" url="pat\pattern_5.patt">
+        <a-box material="color: #3F888F; transparent: true; opacity: 0.3; src: #grid;"></a-box>
+      </a-marker>
+      <a-marker id="marker_6" type="pattern" url="pat\pattern_6.patt">
+        <a-box material="color: #3D2B1F; transparent: true; opacity: 0.3; src: #grid;"></a-box>
+      </a-marker>
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>

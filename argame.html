@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script>
+
+    var x = 0,y = 0.2 ,z = 1.2;
+    var count =0 ;
+ 
+ 
+
+ function OnClick() {
+    
+            count=count+1          
+             y=y-0.1;   
+             document.querySelector('#pam').setAttribute("position",`${0} ${0} ${y}`); //передвежение
+        
+ }
+
+ function OnClick2() {  //прыжок в портал
+ 
+     if ( count != 13) {
+        document.write('<img src="src/prog.jpg">') 
+        }else {
+            document.write('<img src="src\pob.jpg">');
+           }
+     }
+    </script>
+
+    <style>
+        .but{
+            position: fixed;
+            top: 550px;
+            left:500px;  
+            font-weight: bold;
+            height: 50px;
+            width: 100px;            
+        }
+        .but1{
+            position: fixed;
+            top: 550px;
+            left: 1050px;
+            font-weight: bold;
+            height: 50px;
+            width: 100px;            
+        }
+    </style>
+  </head>
+  <body>
+   
+
+    <a-asset-item id="svin" src="svino.gltf"></a-asset-item>
+    <a-asset-item id="portal" src="hiko.gltf"></a-asset-item>
+
+    <a-scene embedded arjs  id="scene"> 
+     <a-assets>
+          <img  id="pol" src="src\Bodka.png" >
+         
+     </a-assets>  
+    <a-marker id="mark"  preset="custom" type="pattern" url="pat\pattern-g.patt">              
+        <a-plane material='src: #pol' position="0 0 0" rotation="-90 90 0" width="3" > </a-plane>
+    <a-gltf-model id="pam"  rotation="0 -180 0" src="#svin"  position="0 0.2 1.2" > </a-gltf-model> 
+    <a-gltf-model id="port"  rotation="0 0 0" src="#portal"  position="0 0.2 -1.55" > </a-gltf-model> 
+     
+
+       
+    </a-marker> 
+
+        <a-entity camera></a-entity>
+    </a-scene>
+    <button onclick="OnClick()"  class="but"> Вперед!
+    </button> 
+    <button onclick="OnClick2()" id="port" class="but1"> Прыгнуть в портал
+    </button> 
+  </body>
+</html>
