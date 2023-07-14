@@ -1,0 +1,20 @@
+.button-cover {
+    padding: 0.7rem;
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: rgba(76, 4, 127, 0.318);
+    color: #0069e1;
+    border-radius: 7px;
+  }
+  .button-covers {
+    padding: 0.7rem;
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: rgba(4, 29, 255, 0.302);
+    color: #000000;
+    border-radius: 7px;
+  }
+  
+  
